@@ -73,7 +73,7 @@ def write(pattern, f, settings=None):
 
             if alternate_z_value:
                 # alternates the z value between 0 and 1
-                z = next(alternate_z)
+                z = next(alternate_z)*stitch_z_travel
             elif stitch_z_travel > 0.0001:
                 # For DIY embroidery machines, stitching is modeled as continuous
                 # travel on the Z axis.  The Z motor is hooked up to the hand wheel
